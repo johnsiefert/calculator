@@ -1,7 +1,9 @@
-let number1 = '';
-let number2 = '';
-let operator = '';
-
+const number1 = '';
+const number2 = '';
+const operator = '';
+const button = document.getElementById("buttons");
+const display = document.getElementById("display");
+const btn = document.querySelector('button')
 // let firstOperator = null;
 // let secondOperator = null;
 // let result = null;
@@ -23,7 +25,7 @@ const divide = (number1, number2)=> {
 };
 
 
-function operate(operator, number1, number2) {
+const operate = (operator, number1, number2) =>{
   switch (operator) {
     case '+':
        return add(number1, number2);
@@ -36,7 +38,9 @@ function operate(operator, number1, number2) {
        default:
         console.log("Error!")
   }
+};
 
-}
-console.log(operate("*", 8, 9));
+button.addEventListener("click", () =>{
+
+})
 
