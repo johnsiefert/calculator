@@ -2,14 +2,13 @@ let number1 = '';
 let number2 = '';
 let operator = '';
 
-let firstOperator = null;
-let secondOperator = null;
-let result = null;
+// let firstOperator = null;
+// let secondOperator = null;
+// let result = null;
 
 const add = (number1, number2) => {
   return parseFloat(number1) + parseFloat(number2);
 };
-
 
 const subtract = (number1, number2) => {
   return parseFloat(number1) - parseFloat(number2);
@@ -27,21 +26,17 @@ const divide = (number1, number2)=> {
 function operate(operator, number1, number2) {
   switch (operator) {
     case '+':
-       add(number1, number2);
-      break;
+       return add(number1, number2);
     case '-':
-       subtract(number1, number2);
-      break;
+       return subtract(number1, number2);
     case '*':
-       multiply(number1, number2);
-      break;
+      return  multiply(number1, number2);
     case '/':
-       divide(number1, number2);
-       break;
+      return divide(number1, number2);
        default:
         console.log("Error!")
   }
 
 }
-
+console.log(operate("*", 8, 9));
 
