@@ -19,12 +19,12 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.buttons > div {
+.buttons > button {
     border-top: 1px solid gray;
     border-right: 1px solid gray;
 }
 
-.button {
+.btn {
     border: 0.5px solid #999;
     line-height: 100px;
     text-align: center;
@@ -37,7 +37,7 @@
     color: white;
 }
 
-.button:hover {
+.btn:hover {
     background-color: black;
     color: white;
     transition: 0.5s ease-in-out;

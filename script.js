@@ -1,21 +1,47 @@
-const add =  (a, b) => {
-    return a + b;
-  };
-  console.log(add(5,5))
+let number1 = '';
+let number2 = '';
+let operator = '';
 
-  const subtract = (a, b) => {
-    return a - b;
-  };
-  console.log(subtract(8,4))
+let firstOperator = null;
+let secondOperator = null;
+let result = null;
 
-  const multiply = (a, b) => {
-    return a * b;
-  };
-
-  console.log(multiply(10,7))
+const add = (number1, number2) => {
+  return parseFloat(number1) + parseFloat(number2);
+};
 
 
-  const divide =  (a, b) => {
-    return a / b;
-  };
-  console.log(subtract(12,4))
+const subtract = (number1, number2) => {
+  return parseFloat(number1) - parseFloat(number2);
+};
+
+const multiply = (number1, number2)=> {
+  return parseFloat(number1) * parseFloat(number2);
+};
+
+const divide = (number1, number2)=> {
+  return parseFloat(number1) / parseFloat(number2);
+};
+
+
+function operate(operator, number1, number2) {
+  switch (operator) {
+    case '+':
+       add(number1, number2);
+      break;
+    case '-':
+       subtract(number1, number2);
+      break;
+    case '*':
+       multiply(number1, number2);
+      break;
+    case '/':
+       divide(number1, number2);
+       break;
+       default:
+        console.log("Error!")
+  }
+
+}
+
+
