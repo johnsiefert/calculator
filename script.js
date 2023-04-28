@@ -3,7 +3,7 @@ const number2 = '';
 const operator = '';
 const button = document.getElementById("buttons");
 const display = document.getElementById("display");
-const btn = document.querySelector('button')
+const btn = document.querySelector('.btn')
 // let firstOperator = null;
 // let secondOperator = null;
 // let result = null;
@@ -40,7 +40,10 @@ const operate = (operator, number1, number2) =>{
   }
 };
 
-button.addEventListener("click", () =>{
-
-})
+button.addEventListener("click", (e) =>{
+console.log(display.textContent += e.target.value)
+if(e.target.value === "clear") {
+  return display.textContent = ''
+}
+});
 
