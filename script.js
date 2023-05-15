@@ -4,6 +4,7 @@ const operators = document.querySelectorAll('.operator');
 const clear = document.querySelector('#clear');
 const decimal = document.querySelector('#decimal');
 const equal = document.querySelector('#equal')
+const posNegButton = document.querySelector('#posNeg');
 
 let displayValue = "";
 let currentNumber = "";
@@ -12,7 +13,7 @@ let prevOperator = "";
 
 
 // performs calculations and displays them
-function operate(operator, a, b){
+const operate = (operator, a, b) =>{
   switch (operator){
     case "add" :
       display.textContent = a + b
@@ -76,6 +77,16 @@ equal.addEventListener('click', () => {
   operate(prevOperator, Number(currentNumber), Number(displayValue));
 })
 
+posNegButton.addEventListener('click', () => {
+  if (displayValue) {
+    displayValue = parseFloat(displayValue) * -1;
+    display.innerText = displayValue;
+  } else {
+    currentNumber = parseFloat(currentNumber) * -1;
+    display.innerText = currentNumber;
+  }
+});
+
 // if there is no display value, displayValue = ".", if there is a display value add "." to it
 // store the result
 decimal.addEventListener('click', () => {
@@ -93,4 +104,6 @@ clear.addEventListener('click', () =>{
   prevOperator = "";
   document.querySelector('#clear').innerHTML = "C";
 });
+
+
 
